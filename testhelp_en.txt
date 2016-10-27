@@ -1,0 +1,28 @@
+Usage: [flag] [int]	OR	[flag]  OR  [flag] [flag] [string]
+ 
+Options: 
+-h, -?  --help		Display the help message and then exit 
+-p,     --port		Set the port then exit 
+ -!,    --about     Print the about information
+ -v,    --version   Print the version information 
+ -p -e              Accesses a predefined enfvironment variable
+ 
+All flags must be entered in lowercase characters. 
+Only one flag may be used at a time.    
+When setting ports: 
+Only one port may be set at a time. 
+Port numbers must be real numbers between 1-65,000. 
+There is only one space between the flag and port. 
+
+Example -p: "setport -p 1337"    
+Port 1337 will be set
+
+Example -e: "setport -p -e MY_PORT"
+The predefined environment variable "MY_PORT" will be set
+
+Exit Status: 
+0	there are no errors 
+1	there are too many inputs/arguements 
+2	the flag entered is not a valid flag 
+3	the port entered is out of range or is not a real number 
+4   the specified environment variable does not exist

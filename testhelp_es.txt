@@ -1,0 +1,28 @@
+Uso: [bandera] [int] O [bandera] O [bandera] [bandera] [cadena]
+ 
+opciones:
+-h, -? --help Muestra el mensaje de ayuda y salir
+-p, --port Ajuste el puerto de salida a continuación,
+ - !, --unos Imprimir la información acerca
+ -v, --version Muestra la información de versión
+ -p -e accede a una variable de enfvironment predefinido
+ 
+Todas las banderas se deben introducir en los caracteres en minúsculas.
+Sólo una bandera se puede usar a la vez.
+Al configurar los puertos:
+Sólo un puerto puede configurarse a la vez.
+Los números de puerto deben ser números reales entre 1-65,000.
+Sólo hay un espacio entre el pabellón y del puerto.
+
+Ejemplo -P: "SETPORT -p 1337"
+Puerto 1337 se establecerá
+
+Ejemplo -e: "SETPORT -p -e MY_PORT"
+El "MY_PORT" predefinido variable de entorno se establecerá
+
+Estado de salida:
+0 no hay errores
+1 hay demasiadas entradas / me lo quitaron
+2 la bandera introducido no es un indicador válido
+3 del puerto introducido está fuera de alcance o no es un número real
+4 no existe la variable de entorno especificada
